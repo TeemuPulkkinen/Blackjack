@@ -40,7 +40,7 @@ public class Kortti {
 
     @Override
     public String toString() {
-        return this.maa + this.maa;
+        return this.maa + this.arvo;
     }
     //testikommentti
 }
