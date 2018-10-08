@@ -11,4 +11,6 @@ package blackjack;
  */
 public class Korttipakka {
     
+    private static int[] arvot = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+    private static String[] maat = {"Risti", "Ruutu", "Hertta", "Pata"};
 }
