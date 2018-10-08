@@ -5,11 +5,15 @@
  */
 package blackjack;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author s1800591
  */
 public class PelaajanKasi {
     
+    ArrayList<Kortti> kortit = new ArrayList<>();
     
+   
 }
