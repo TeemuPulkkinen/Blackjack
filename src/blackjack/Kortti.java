@@ -10,5 +10,16 @@ package blackjack;
  * @author s1800591
  */
 public class Kortti {
-    
+
+    //atribuutit
+    private int arvo = 0;
+    private String maa = "";
+
+    //konstruktori
+    public Kortti(int kortinArvo, String kortinMaa) {
+        this.arvo = kortinArvo;
+        this.maa = kortinMaa;
+    }
+
+    //muut metodit
 }
