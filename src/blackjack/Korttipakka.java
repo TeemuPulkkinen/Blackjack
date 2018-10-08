@@ -81,8 +81,8 @@ public class Korttipakka {
         
     }
     
-    public void jaaKortti {
+    
         
 }
 
-}
+
