@@ -42,4 +42,5 @@ public class Kortti {
     public String toString() {
         return this.maa + this.maa;
     }
+    //testikommentti
 }
