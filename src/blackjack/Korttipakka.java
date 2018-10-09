@@ -17,6 +17,7 @@ public class Korttipakka {
     //private static String[] maat = {"Risti", "Ruutu", "Hertta", "Pata"};
     private ArrayList<Kortti> pakka = new ArrayList<Kortti>();
 
+    
     public Korttipakka() {
         pakka.add(new Kortti(1, "Ristiässä"));
         pakka.add(new Kortti(2, "Risti"));
@@ -57,7 +58,7 @@ public class Korttipakka {
         pakka.add(new Kortti(9, "Hertta"));
         pakka.add(new Kortti(10, "Hertta"));
         pakka.add(new Kortti(11, "Herttajätkä"));
-        pakka.add(new Kortti(12, "Herttaakka"));
+        pakka.add(new Kortti(12, "Hertta-akka"));
         pakka.add(new Kortti(13, "Herttakurko"));
 
         pakka.add(new Kortti(1, "Ruutuässä"));
@@ -81,7 +82,11 @@ public class Korttipakka {
         
     }
     
-    
+    public jaaKortti() {
+        Random rand = new Random();
+        int element = pakka.get(rand.nextInt(.size()));
+        System.out.println("Seuraava kortti on " + element);
+    }
         
 }
 

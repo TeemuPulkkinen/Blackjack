@@ -11,9 +11,10 @@ package blackjack;
  */
 public class Kortti {
 
-    //atribuutit
-    private int arvo;
-    private String maa;
+    //atribuutit, ehkä tarvitaan private
+    int arvo = 0;
+    String maa = "";
+    //String kortinNimi = "";
 
     //konstruktori
     public Kortti(int kortinArvo, String kortinMaa) {
@@ -40,7 +41,8 @@ public class Kortti {
 
     @Override
     public String toString() {
-        return this.maa + this.arvo;
+        String kortinNimi;
+        return kortinNimi = maa + "" + arvo;
     }
     //testikommentti
 }
