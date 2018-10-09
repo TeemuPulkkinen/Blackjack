@@ -7,18 +7,27 @@ package blackjack;
 
 import java.util.*;
 
+
 /**
  *
  * @author s1800591
  */
 public class Korttipakka {
 
-    //private static int[] arvot = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-    //private static String[] maat = {"Risti", "Ruutu", "Hertta", "Pata"};
-    private ArrayList<Kortti> pakka = new ArrayList<Kortti>();
+    //nämä ei ole listoja vaan taulukkoja
+    public static String[] arvot = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"};
+    public static String[] maat = {"Risti", "Ruutu", "Hertta", "Pata"};
+    //luodaan ArrayList
+    public ArrayList<Kortti> pakka = new ArrayList<Kortti>();
 
-    
-    public Korttipakka() {
+    for (int a=0; a<=arvot.length(); a++)
+            {
+                for (int b=0; b<= maat.length(); b++)
+                 {
+                   pakka.add(new Kortti(arvot[a], maat[b]));  //I've noticed many people use this to add the card names and suits to the cards ArrayList, and it gives me an error of not being able to turn suits[b] into an integer, so I'm confused as to how it worked for others  
+
+                 }
+    /*public Korttipakka() {
         pakka.add(new Kortti(1, "Ristiässä"));
         pakka.add(new Kortti(2, "Risti"));
         pakka.add(new Kortti(3, "Risti"));
@@ -75,7 +84,8 @@ public class Korttipakka {
         pakka.add(new Kortti(12, "Ruutuakka"));
         pakka.add(new Kortti(13, "Ruutukurko"));
 
-    }
+    }*/
+
 
     public void shuffle() {
         Collections.shuffle(pakka);
