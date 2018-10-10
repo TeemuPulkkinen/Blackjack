@@ -12,8 +12,13 @@ import java.util.ArrayList;
  * @author s1800591
  */
 public class PelaajanKasi {
-    
-    ArrayList<Kortti> kortit = new ArrayList<>();
-    
-   
+
+    private final ArrayList<Kortti> kortit = new ArrayList<>();
+
+    public int otaKortti(int satunnaisKortti) {
+
+        int pelaajankasi = satunnaisKortti;
+        return satunnaisKortti;
+    }
+
 }

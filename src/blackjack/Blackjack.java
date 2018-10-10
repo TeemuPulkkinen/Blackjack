@@ -9,7 +9,7 @@ package blackjack;
  *
  * @author s1800591
  */
-public class Paaohjelma {
+public class Blackjack {
 
     /**
      * @param args the command line arguments
@@ -18,6 +18,5 @@ public class Paaohjelma {
         // TODO code application logic here
         System.out.println("");
     }
-    
-    
+
 }

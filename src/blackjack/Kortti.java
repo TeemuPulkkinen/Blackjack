@@ -17,7 +17,7 @@ public class Kortti {
     //String kortinNimi = "";
 
     //konstruktori
-    public Kortti(String maa, int arvo ) {
+    public Kortti(String maa, int arvo) {
         this.arvo = arvo;
         this.maa = maa;
     }
@@ -30,7 +30,7 @@ public class Kortti {
     public int getArvo() {
         return arvo;
     }
-    
+
     public void setArvo(int arvo) {
         this.arvo = arvo;
     }
