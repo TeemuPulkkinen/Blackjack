@@ -12,31 +12,31 @@ package blackjack;
 public class Kortti {
 
     //atribuutit, ehkä tarvitaan private
-    int arvo = 0;
-    String maa = "";
+    private int arvo = 0;
+    private String maa = "";
     //String kortinNimi = "";
 
     //konstruktori
-    public Kortti(int kortinArvo, String kortinMaa) {
-        this.arvo = kortinArvo;
-        this.maa = kortinMaa;
-    }
-
-    //muut metodit
-    void setArvo(Integer arvo) {
+    public Kortti(String maa, int arvo ) {
         this.arvo = arvo;
-    }
-
-    void setMaa(String maa) {
         this.maa = maa;
     }
 
-    String getMaa() {
+    //muut metodit
+    public String getMaa() {
         return maa;
     }
 
-    Integer getArvo() {
+    public int getArvo() {
         return arvo;
+    }
+    
+    public void setArvo(int arvo) {
+        this.arvo = arvo;
+    }
+
+    public void setMaa(String maa) {
+        this.maa = maa;
     }
 
     @Override
