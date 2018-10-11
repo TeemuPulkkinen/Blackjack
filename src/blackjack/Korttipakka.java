@@ -17,7 +17,7 @@ import java.util.Random;
 public class Korttipakka {
 
     //luodaan ArrayList<Kortti>-tyyppinen attribuutti pakka
-    private final ArrayList<Kortti> pakka = new ArrayList<>();
+    public final ArrayList<Kortti> pakka = new ArrayList<>();
 
     //luodaan luokan Korttipakka oletuskonstruktori
     public Korttipakka() {

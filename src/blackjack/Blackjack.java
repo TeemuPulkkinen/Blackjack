@@ -5,6 +5,7 @@
  */
 package blackjack;
 
+
 /**
  *
  * @author s1800591
@@ -14,7 +15,17 @@ public class Blackjack {
     /**
      * @param args the command line arguments
      */
-    
-    }
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //Tässä testataan erilaisia koodinpätkiä ^_
+        
+        //Viiniä
+        //Luodaan Korttipakka-luokkaa kutsuen uusi muuttuja peliPakka
+        Korttipakka peliPakka = new Korttipakka();
 
+        System.out.println("Korttipakka järjestyksessä");
+        System.out.println();
+        
+    }
+}
 

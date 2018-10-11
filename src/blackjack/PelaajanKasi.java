@@ -17,7 +17,7 @@ public class PelaajanKasi {
 
     public int otaKortti(int satunnaisKortti) {
 
-        int pelaajankasi = satunnaisKortti;
+        //int pelaajankasi = satunnaisKortti;
         return satunnaisKortti;
     }
 
@@ -39,7 +39,7 @@ public class PelaajanKasi {
 
             kadenSumma = kadenSumma + 11;
         }
-        if (kortti1 + kortti2 == 21) {
+        if ((kortti1 + kortti2) > 21) {
 
             kadenSumma = kadenSumma - 10;
         }
