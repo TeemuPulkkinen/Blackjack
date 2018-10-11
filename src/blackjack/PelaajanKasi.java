@@ -24,6 +24,8 @@ public class PelaajanKasi {
     public int selvitaSumma(int kadenSumma) {
         
         int arvo = 0;
+        int kortti1 = 0;
+        int kortti2 = 0;
         if (arvo >=2  || arvo <=10) {
             
             kadenSumma = kadenSumma + arvo;
@@ -35,6 +37,10 @@ public class PelaajanKasi {
         if (arvo == 1) {
             
             kadenSumma = kadenSumma + 11;
+        }
+        if (kortti1 + kortti2 == 21) {
+            
+            kadenSumma = kadenSumma - 10;
         }
         return kadenSumma;
     }
