@@ -23,8 +23,9 @@ public class Blackjack {
         //Luodaan Korttipakka-luokkaa kutsuen uusi muuttuja peliPakka
         Korttipakka peliPakka = new Korttipakka();
 
+        peliPakka.sekoita();
         System.out.println("Korttipakka järjestyksessä");
-        System.out.println();
+        System.out.println(peliPakka);
         
     }
 }
