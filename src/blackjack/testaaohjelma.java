@@ -9,12 +9,11 @@ package blackjack;
  *
  * @author s1800591
  */
-public class Blackjack {
-
-    /**
-     * @param args the command line arguments
-     */
+public class testaaohjelma {
     
-    }
-
-
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //Tässä testataan erilaisia koodinpätkiä ^_^
+        System.out.println("");
+}
+}
