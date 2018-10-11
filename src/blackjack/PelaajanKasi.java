@@ -20,5 +20,23 @@ public class PelaajanKasi {
         int pelaajankasi = satunnaisKortti;
         return satunnaisKortti;
     }
+    
+    public int selvitaSumma(int kadenSumma) {
+        
+        int arvo = 0;
+        if (arvo >=2  || arvo <=10) {
+            
+            kadenSumma = kadenSumma + arvo;
+        }
+        if (arvo >=11 || arvo <= 13) {
+            
+            kadenSumma = kadenSumma + 10;
+        }
+        if (arvo == 1) {
+            
+            kadenSumma = kadenSumma + 11;
+        }
+        return kadenSumma;
+    }
 
 }
