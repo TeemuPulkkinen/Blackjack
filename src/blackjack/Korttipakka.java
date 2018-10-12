@@ -46,7 +46,7 @@ public class Korttipakka {
     silloin return statement on void.
      */
     public int jaaKortti() {
-        int satunnaisKortti = Integer.toString((pakka.get(1)));
+        int satunnaisKortti = 0;
         System.out.println("Seuraava kortti on " + satunnaisKortti);
         pakka.remove(satunnaisKortti);//pitäisi teoriassa poistaa satunnaiskortti
         return satunnaisKortti;
