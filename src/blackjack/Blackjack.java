@@ -17,12 +17,22 @@ public class Blackjack {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //Tässä testataan erilaisia koodinpätkiä ^_
+        //Tässä testataan erilaisia koodinpätkiä ^_^
         
         //Viiniä
-        //Luodaan Korttipakka-luokkaa kutsuen uusi muuttuja peliPakka
+       
+        
+        //Luodaan muuttuja johon voidaan lisätä kortteja
+        //Korttipakka kasikortit = new Korttipakka();
+        
+        //lisätään käteen kortteja
+        //kasikortit.jaaKortti();
+        //System.out.println("Kädessä on kortit " + kasikortit);
+        
+        
+         //Luodaan Korttipakka-luokkaa kutsuen uusi muuttuja peliPakka
         Korttipakka peliPakka = new Korttipakka();
-
+        //jaetaan kortteja niin monta kertaa kuin koodissa esiintyy komento pelipakka.jaaKortti();
         System.out.println("Korttipakka järjestyksessä");
         peliPakka.sekoita();
         peliPakka.jaaKortti();

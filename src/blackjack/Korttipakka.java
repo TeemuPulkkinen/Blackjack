@@ -47,10 +47,11 @@ public class Korttipakka {
     silloin return statement on void.
      */
     public int jaaKortti() {
+
         Random rand = new Random();
-        int satunnaisKortti = rand.nextInt(pakka.size());
+        int satunnaisKortti = rand.nextInt(pakka.size());//hakee ArrayListasta pakka seuraavan kortin
         System.out.println("Seuraava kortti on " + pakka.get(satunnaisKortti));
-        pakka.remove(satunnaisKortti);
+        pakka.remove(satunnaisKortti);//pitäisi teoriassa poistaa satunnaiskortti
         return satunnaisKortti;
     }
 }
