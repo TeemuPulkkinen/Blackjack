@@ -22,7 +22,7 @@ public class Korttipakka {
     //luodaan luokan Korttipakka oletuskonstruktori
     public Korttipakka() {
 
-        ArrayList<String> maat = new ArrayList<>(Arrays.asList("Pata", "Hertta", "Ruutu", "Risti"));
+        ArrayList<String> maat = new ArrayList<>(Arrays.asList("Pata ", "Hertta ", "Ruutu ", "Risti "));
 
         //Käy läpi kaikki annetut maat
         for (String maa : maat) {
