@@ -14,7 +14,7 @@ public class Kortti {
     //atribuutit, ehkä tarvitaan private
     private int arvo = 0;
     private String maa = "";
-    String kortinNimi = "";
+    //String kortinNimi = "";
 
     //konstruktori
     public Kortti(String maa, int arvo) {
@@ -42,7 +42,8 @@ public class Kortti {
     @Override
     public String toString() {
         
-        return kortinNimi = maa + "" + arvo;
+        String kortinNimi = maa + "" + arvo;
+        return kortinNimi;
     }
     
 }

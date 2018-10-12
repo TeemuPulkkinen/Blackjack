@@ -8,7 +8,6 @@ package blackjack;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Random;
 
 /**
  *
@@ -47,10 +46,8 @@ public class Korttipakka {
     silloin return statement on void.
      */
     public int jaaKortti() {
-
-        Random rand = new Random();
-        int satunnaisKortti = rand.nextInt(pakka.size());//hakee ArrayListasta pakka seuraavan kortin
-        System.out.println("Seuraava kortti on " + pakka.get(satunnaisKortti));
+        int satunnaisKortti = Integer.toString((pakka.get(1)));
+        System.out.println("Seuraava kortti on " + satunnaisKortti);
         pakka.remove(satunnaisKortti);//pitäisi teoriassa poistaa satunnaiskortti
         return satunnaisKortti;
     }

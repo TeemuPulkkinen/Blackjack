@@ -16,9 +16,11 @@ public class PelaajanKasi {
     private final ArrayList<Kortti> kortit = new ArrayList<>();
     
     public int otaKortti(int satunnaisKortti) {
-
-        //int pelaajankasi = satunnaisKortti;
+        
+        
+        
         return satunnaisKortti;
+        //int pelaajankasi = satunnaisKortti;
     }
 
     int arvo = 0;
