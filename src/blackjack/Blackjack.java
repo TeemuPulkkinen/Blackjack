@@ -19,7 +19,7 @@ public class Blackjack {
         
         //Luodaan muuttuja johon voidaan lisätä kortteja
         //Korttipakka kasikortit = new Korttipakka();
-        
+        // 
         //lisätään käteen kortteja
         //kasikortit.jaaKortti();
         //System.out.println("Kädessä on kortit " + kasikortit);
@@ -33,10 +33,11 @@ public class Blackjack {
         peliPakka.sekoita(); // sekoitetaan korttipakka
         Kortti kasi = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
         PelaajanKasi peliKasi = new PelaajanKasi(); // luodaan pelaajan käsi
-        peliKasi.otaKortti(kasi); //lähetetään kortti pelaajan pakkaan
+        peliKasi.otaKortti(kasi); //lähetetään kortti pelaajan käteen
 
 
         System.out.println(peliPakka);
+        System.out.println("");
 
         
     }
