@@ -45,16 +45,15 @@ public class Korttipakka {
     tiedetään mitä tyyppiä sen pitää palauttaa. Jos ei tarvitse palauttaa mitään, niin
     silloin return statement on void.
      */
-    public int jaaKortti() {
-        int satunnaisKortti = 0;
-        System.out.println("Seuraava kortti on " + satunnaisKortti);
-        pakka.remove(satunnaisKortti);//pitäisi teoriassa poistaa satunnaiskortti
-        return satunnaisKortti;
+    public void jaaKortti() {
+        System.out.println("Seuraava kortti on " + pakka.get(1));
+        pakka.remove(1);
+        //pitäisi teoriassa poistaa satunnaiskortti
     }
 
     @Override
     public String toString() {
-        return "Korttipakka{" + "pakka=" + pakka + '}';
+        return "Korttipakka" + "pakka=" + pakka;
     }
 
 }
