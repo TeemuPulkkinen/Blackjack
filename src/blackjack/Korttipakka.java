@@ -16,7 +16,7 @@ import java.util.Collections;
 public class Korttipakka {
 
     //luodaan ArrayList<Kortti>-tyyppinen attribuutti pakka
-    public final ArrayList<Kortti> pakka = new ArrayList<>();
+    private ArrayList<Kortti> pakka = new ArrayList<>();
 
     //luodaan luokan Korttipakka oletuskonstruktori
     public Korttipakka() {
@@ -46,14 +46,14 @@ public class Korttipakka {
     silloin return statement on void.
      */
     public void jaaKortti() {
-        System.out.println("Seuraava kortti on " + pakka.get(1));
-        pakka.remove(1);
+        System.out.println("Seuraava kortti on " + pakka.get(0));
+        pakka.remove(0);
         //pitäisi teoriassa poistaa satunnaiskortti
     }
 
     @Override
     public String toString() {
-        return "Korttipakka" + "pakka=" + pakka;
+        return "Jäljellä olevat kortit:" + pakka;
     }
 
 }
