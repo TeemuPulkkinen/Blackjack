@@ -51,4 +51,10 @@ public class Korttipakka {
         pakka.remove(satunnaisKortti);//pitäisi teoriassa poistaa satunnaiskortti
         return satunnaisKortti;
     }
+
+    @Override
+    public String toString() {
+        return "Korttipakka{" + "pakka=" + pakka + '}';
+    }
+
 }
