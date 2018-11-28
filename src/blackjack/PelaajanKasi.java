@@ -18,10 +18,7 @@ public class PelaajanKasi {
     int emannanSumma = 0;
     
     public void otaKortti(Kortti jaettu) {
-        
         kortit.add(jaettu);
-
-        //int pelaajankasi = satunnaisKortti;
     }
 
     int arvo = 0;
