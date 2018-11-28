@@ -14,12 +14,14 @@ import java.util.ArrayList;
 public class PelaajanKasi {
 
     private final ArrayList<Kortti> kortit = new ArrayList<>();
+    int kadenSumma = 0;
+    int emannanSumma = 0;
     
-    public int otaKortti(int satunnaisKortti) {
+    public void otaKortti(Kortti jaettu) {
         
-        
-        
-        return satunnaisKortti;
+        kortit.add(jaettu);
+
+        //int pelaajankasi = satunnaisKortti;
     }
 
     int arvo = 0;

@@ -31,13 +31,10 @@ public class Blackjack {
         //jaetaan kortteja niin monta kertaa kuin koodissa esiintyy komento pelipakka.jaaKortti();
 
         peliPakka.sekoita();
+        Kortti kasi = peliPakka.jaaKortti();
+        PelaajanKasi peliKasi = new PelaajanKasi();
+        peliKasi.otaKortti(kasi);
 
-        System.out.println("Korttipakka järjestyksessä");
-
-        peliPakka.sekoita();
-        peliPakka.jaaKortti();
-        peliPakka.jaaKortti();
-        peliPakka.jaaKortti();
 
         System.out.println(peliPakka);
 

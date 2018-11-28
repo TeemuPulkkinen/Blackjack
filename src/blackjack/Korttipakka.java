@@ -45,13 +45,8 @@ public class Korttipakka {
     tiedetään mitä tyyppiä sen pitää palauttaa. Jos ei tarvitse palauttaa mitään, niin
     silloin return statement on void.
      */
-    public void jaaKortti() {
-        System.out.println("Seuraava kortti on " + pakka.get(0));
-        System.out.println("Poistettu kortti on " + pakka.remove(0));
-        System.out.println("Seuraava kortti on " + pakka.get(0));
-        pakka.remove(0);
-        System.out.println("Seuraava kortti on " + pakka.get(0));
-        pakka.remove(0);
+    public Kortti jaaKortti() {
+        return pakka.remove(0);
     }
 
     @Override
