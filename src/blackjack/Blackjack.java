@@ -16,11 +16,6 @@ public class Blackjack {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        //Tässä testataan erilaisia koodinpätkiä ^_^
-        
-        //Viiniä
-       
         
         //Luodaan muuttuja johon voidaan lisätä kortteja
         //Korttipakka kasikortit = new Korttipakka();
