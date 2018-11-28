@@ -14,11 +14,9 @@ import java.util.ArrayList;
 public class PelaajanKasi {
 
     private final ArrayList<Kortti> kortit = new ArrayList<>();
-    int kadenSumma = 0;
-    int emannanSumma = 0;
     
     public void otaKortti(Kortti jaettu) {
-        kortit.add(jaettu);
+        kortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
     }
 
     int arvo = 0;
