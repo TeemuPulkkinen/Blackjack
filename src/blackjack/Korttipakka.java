@@ -47,8 +47,11 @@ public class Korttipakka {
      */
     public void jaaKortti() {
         System.out.println("Seuraava kortti on " + pakka.get(0));
+        System.out.println("Poistettu kortti on " + pakka.remove(0));
+        System.out.println("Seuraava kortti on " + pakka.get(0));
         pakka.remove(0);
-        //pitäisi teoriassa poistaa satunnaiskortti
+        System.out.println("Seuraava kortti on " + pakka.get(0));
+        pakka.remove(0);
     }
 
     @Override
