@@ -18,11 +18,11 @@ public class Blackjack {
     public static void main(String[] args) {
         
         //Luodaan muuttuja johon voidaan lisätä kortteja
-        //Korttipakka kasikortit = new Korttipakka();
+        Korttipakka kasikortit = new Korttipakka();
         
         //lisätään käteen kortteja
-        //kasikortit.jaaKortti();
-        //System.out.println("Kädessä on kortit " + kasikortit);
+        kasikortit.jaaKortti();
+        System.out.println("Kädessä on kortit " + kasikortit);
         
         
          //Luodaan Korttipakka-luokkaa kutsuen uusi muuttuja peliPakka

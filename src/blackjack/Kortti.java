@@ -11,10 +11,10 @@ package blackjack;
  */
 public class Kortti {
 
-    //atribuutit, ehkä tarvitaan private
+    //attribuutit, ehkä tarvitaan private
     private int arvo = 0;
     private String maa = "";
-    //String kortinNimi = "";
+    
 
     //konstruktori
     public Kortti(String maa, int arvo) {

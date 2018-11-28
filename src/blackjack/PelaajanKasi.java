@@ -20,7 +20,6 @@ public class PelaajanKasi {
         
         
         return satunnaisKortti;
-        //int pelaajankasi = satunnaisKortti;
     }
 
     int arvo = 0;
