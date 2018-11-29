@@ -32,12 +32,18 @@ public class Blackjack {
 
         peliPakka.sekoita(); // sekoitetaan korttipakka
         Kortti kasi = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
+        Kortti kasi2 = peliPakka.jaaKortti(); // otetaan toinen kortti ja jaetaan se
         PelaajanKasi peliKasi = new PelaajanKasi(); // luodaan pelaajan käsi
         peliKasi.otaKortti(kasi); //lähetetään kortti pelaajan käteen
+        peliKasi.otaKortti(kasi2); // lähetetään toinen kortti pelaajan käteen
 
-
+        
+        
+        
         System.out.println(peliPakka);
-        System.out.println("");
+        System.out.println(kasi);
+        System.out.println(kasi2);
+        System.out.println(peliKasi);
 
         
     }

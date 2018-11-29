@@ -24,7 +24,7 @@ public class Korttipakka {
         ArrayList<String> maat = new ArrayList<>(Arrays.asList("Pata ", "Hertta ", "Ruutu ", "Risti "));
 
         //Käy läpi kaikki annetut maat
-        for (String maa : maat) {
+        for (String maa : maat) { //for each-looppi
             int i = 1;
 
             //käy läpi välin 1-13 , koska listan koko on aina n-1
@@ -48,6 +48,8 @@ public class Korttipakka {
     public Kortti jaaKortti() {
         return pakka.remove(0);
     }
+    
+    
 
     @Override
     public String toString() {

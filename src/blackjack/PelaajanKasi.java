@@ -14,42 +14,54 @@ import java.util.ArrayList;
 public class PelaajanKasi {
 
     private final ArrayList<Kortti> kortit = new ArrayList<>();
-    
+
     public void otaKortti(Kortti jaettu) {
         kortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
     }
 
-    int arvo = 0;
-    int kortti1 = 0;
-    int kortti2 = 0;
+    public int selvitaSumma() {
 
-    public int selvitaSumma(int kadenSumma) {
+        int kadenSumma = 0;
+        /* Tämä for-looppi käy läpi kortit-listassa olevat kortit ja tarkistaa
+        Kortti-tyypin muuttujan lappu avulla kortin arvon, ja vertaa sitä
+        annettuihin arvoihin.
+         */
+        for (Kortti lappu : kortit) {
 
-        if (arvo >= 2 || arvo <= 10) {
+            if (lappu.getArvo() >= 2 || lappu.getArvo() <= 10) {
 
-            kadenSumma = kadenSumma + arvo;
-        }
-        if (arvo >= 11 || arvo <= 13) {
+                lappu = kadenSumma + lappu;
+            }
+            if (lappu.getArvo() >= 11 || lappu.getArvo() <= 13) {
 
-            kadenSumma = kadenSumma + 10;
-        }
-        if (arvo == 1) {
+                kadenSumma = kadenSumma + 10;
+            }
+            if (lappu.getArvo() == 1) {
 
-            kadenSumma = kadenSumma + 11;
-        }
-        if ((kortti1 + kortti2) > 21) {
+                kadenSumma = kadenSumma + 11;
+            }
+            for (Kortti lappu2 : kortit) {
+                if (lappu2.getArvo() + lappu.getArvo() > 21) {
 
-            kadenSumma = kadenSumma - 10;
+                    kadenSumma = kadenSumma - 10;
+                }
+            }
         }
         return kadenSumma;
     }
 
     //selvittää onko pelaajalla blackjack
-    public void blackjack() {
+    /*public void blackjack() {
 
-        if (kortti1 >= 10 && kortti1 <= 13 && kortti2 == 1) {
+        if (lappu >= 10 && lappu <= 13 && lappu2 == 1) {
             System.out.println("Sinulla on blackjack!");
         }
+
+    }*/
+
+    @Override
+    public String toString() {
+        return "Pelaajan kädessä on kortit " + kortit + ", joiden summa on " + kadenSumma + ". Ensimmäinen kortti on " + lappu + " ja toinen kortti on " + lappu2 + ".";
     }
 
 }
