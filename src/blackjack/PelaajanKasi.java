@@ -22,7 +22,7 @@ public class PelaajanKasi {
     public int selvitaSumma() {
 
         int kadenSumma = 0;
-        /* Tämä for-looppi käy läpi kortit-listassa olevat kortit ja tarkistaa
+        /* Tämä for each-looppi käy läpi kortit-listassa olevat kortit ja tarkistaa
         Kortti-tyypin muuttujan lappu avulla kortin arvon, ja vertaa sitä
         annettuihin arvoihin.
          */
