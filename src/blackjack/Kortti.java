@@ -11,7 +11,7 @@ package blackjack;
  */
 public class Kortti {
 
-    //attribuutit, ehkä tarvitaan private
+    //attribuutit
     private int arvo = 0;
     private String maa = "";
     

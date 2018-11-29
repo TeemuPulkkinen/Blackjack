@@ -31,19 +31,23 @@ public class Blackjack {
         //jaetaan kortteja niin monta kertaa kuin koodissa esiintyy komento pelipakka.jaaKortti();
 
         peliPakka.sekoita(); // sekoitetaan korttipakka
-        Kortti kasi = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
-        Kortti kasi2 = peliPakka.jaaKortti(); // otetaan toinen kortti ja jaetaan se
+        Kortti uusiKasikortti = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
+        Kortti uusiKasikortti2 = peliPakka.jaaKortti(); // otetaan toinen kortti ja jaetaan se
         PelaajanKasi peliKasi = new PelaajanKasi(); // luodaan pelaajan käsi
-        peliKasi.otaKortti(kasi); //lähetetään kortti pelaajan käteen
-        peliKasi.otaKortti(kasi2); // lähetetään toinen kortti pelaajan käteen
-
+        peliKasi.otaKortti(uusiKasikortti); //lähetetään kortti pelaajan käteen
+        peliKasi.otaKortti(uusiKasikortti2); // lähetetään toinen kortti pelaajan käteen
+        
+        PelaajanKasi summa = new PelaajanKasi();
+        summa.selvitaSumma();
         
         
         
         System.out.println(peliPakka);
-        System.out.println(kasi);
-        System.out.println(kasi2);
+        System.out.println(uusiKasikortti);
+        System.out.println(uusiKasikortti2);
         System.out.println(peliKasi);
+        
+        
 
         
     }

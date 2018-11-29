@@ -13,10 +13,10 @@ import java.util.ArrayList;
  */
 public class PelaajanKasi {
 
-    private final ArrayList<Kortti> kortit = new ArrayList<>();
+    private final ArrayList<Kortti> pelaajanKortit = new ArrayList<>();
 
     public void otaKortti(Kortti jaettu) {
-        kortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
+        pelaajanKortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
     }
 
     public int selvitaSumma() {
@@ -26,11 +26,11 @@ public class PelaajanKasi {
         Kortti-tyypin muuttujan lappu avulla kortin arvon, ja vertaa sitä
         annettuihin arvoihin.
          */
-        for (Kortti lappu : kortit) {
+        for (Kortti lappu : pelaajanKortit) {
 
             if (lappu.getArvo() >= 2 || lappu.getArvo() <= 10) {
 
-                lappu = kadenSumma + lappu;
+                //lappu = kadenSumma + lappu;
             }
             if (lappu.getArvo() >= 11 || lappu.getArvo() <= 13) {
 
@@ -40,14 +40,14 @@ public class PelaajanKasi {
 
                 kadenSumma = kadenSumma + 11;
             }
-            for (Kortti lappu2 : kortit) {
+            for (Kortti lappu2 : pelaajanKortit) {
                 if (lappu2.getArvo() + lappu.getArvo() > 21) {
 
                     kadenSumma = kadenSumma - 10;
                 }
             }
         }
-        return kadenSumma;
+        return kadenSumma;//palauttaa käden summan
     }
 
     //selvittää onko pelaajalla blackjack
@@ -61,7 +61,7 @@ public class PelaajanKasi {
 
     @Override
     public String toString() {
-        return "Pelaajan kädessä on kortit " + kortit + ", joiden summa on " + kadenSumma + ". Ensimmäinen kortti on " + lappu + " ja toinen kortti on " + lappu2 + ".";
+        return "Pelaajan kädessä on kortit " + pelaajanKortit + ", joiden summa on "  + ". Ensimmäinen kortti on " + /*lappu*/  " ja toinen kortti on "  /*lappu2*/ + ".";
     }
 
 }
