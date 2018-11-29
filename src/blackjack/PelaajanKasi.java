@@ -28,25 +28,19 @@ public class PelaajanKasi {
          */
         for (Kortti lappu : pelaajanKortit) {
 
-            if (lappu.getArvo() >= 2 || lappu.getArvo() <= 10) {
+            if (lappu.getArvo() >= 2 && lappu.getArvo() <= 10) {
 
-                //lappu = kadenSumma + lappu;
-            }
-            if (lappu.getArvo() >= 11 || lappu.getArvo() <= 13) {
+                kadenSumma = kadenSumma + lappu.getArvo();
+            } else if (lappu.getArvo() >= 11 && lappu.getArvo() <= 13) {
 
                 kadenSumma = kadenSumma + 10;
-            }
-            if (lappu.getArvo() == 1) {
+            } else if (lappu.getArvo() == 1) {
 
                 kadenSumma = kadenSumma + 11;
             }
-            for (Kortti lappu2 : pelaajanKortit) {
-                if (lappu2.getArvo() + lappu.getArvo() > 21) {
 
-                    kadenSumma = kadenSumma - 10;
-                }
-            }
         }
+
         return kadenSumma;//palauttaa käden summan
     }
 
@@ -58,10 +52,9 @@ public class PelaajanKasi {
         }
 
     }*/
-
     @Override
     public String toString() {
-        return "Pelaajan kädessä on kortit " + pelaajanKortit + ", joiden summa on "  + ". Ensimmäinen kortti on " + /*lappu*/  " ja toinen kortti on "  /*lappu2*/ + ".";
+        return "Pelaajan kädessä on kortit " + pelaajanKortit + ", joiden summa on " + selvitaSumma() + ".";
     }
 
 }

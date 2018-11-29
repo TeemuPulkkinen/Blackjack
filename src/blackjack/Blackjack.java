@@ -5,7 +5,6 @@
  */
 package blackjack;
 
-
 /**
  *
  * @author s1800591
@@ -16,40 +15,30 @@ public class Blackjack {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         //Luodaan muuttuja johon voidaan lisätä kortteja
         //Korttipakka kasikortit = new Korttipakka();
         // 
         //lisätään käteen kortteja
         //kasikortit.jaaKortti();
         //System.out.println("Kädessä on kortit " + kasikortit);
-        
-        
-         //Luodaan Korttipakka-luokkaa kutsuen uusi muuttuja peliPakka
+        //Luodaan Korttipakka-luokkaa kutsuen uusi muuttuja peliPakka
         Korttipakka peliPakka = new Korttipakka();
 
         //jaetaan kortteja niin monta kertaa kuin koodissa esiintyy komento pelipakka.jaaKortti();
-
         peliPakka.sekoita(); // sekoitetaan korttipakka
         Kortti uusiKasikortti = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
         Kortti uusiKasikortti2 = peliPakka.jaaKortti(); // otetaan toinen kortti ja jaetaan se
         PelaajanKasi peliKasi = new PelaajanKasi(); // luodaan pelaajan käsi
         peliKasi.otaKortti(uusiKasikortti); //lähetetään kortti pelaajan käteen
         peliKasi.otaKortti(uusiKasikortti2); // lähetetään toinen kortti pelaajan käteen
-        
-        PelaajanKasi summa = new PelaajanKasi();
-        summa.selvitaSumma();
-        
-        
-        
+
+        peliKasi.selvitaSumma(); // käytetään selvitaSumma-muuttujaa pelaajan käteen
+
         System.out.println(peliPakka);
         System.out.println(uusiKasikortti);
         System.out.println(uusiKasikortti2);
         System.out.println(peliKasi);
-        
-        
 
-        
     }
 }
-

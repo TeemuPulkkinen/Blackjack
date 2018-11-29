@@ -48,8 +48,6 @@ public class Korttipakka {
     public Kortti jaaKortti() {
         return pakka.remove(0);
     }
-    
-    
 
     @Override
     public String toString() {
