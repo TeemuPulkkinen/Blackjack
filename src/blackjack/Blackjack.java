@@ -19,10 +19,10 @@ public class Blackjack {
     public static void main(String[] args) {
 
        Scanner lukija = new Scanner(System.in);
-        Korttipakka peliPakka = new Korttipakka();
+       Korttipakka peliPakka = new Korttipakka();
         
         String lisakortti;
-        //jaetaan kortteja niin monta kertaa kuin koodissa esiintyy komento pelipakka.jaaKortti();
+        
         peliPakka.sekoita(); // sekoitetaan korttipakka
         Kortti uusiKasikortti = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
         Kortti uusiKasikortti2 = peliPakka.jaaKortti(); // otetaan toinen kortti ja jaetaan se
@@ -41,12 +41,13 @@ public class Blackjack {
         System.out.println(peliKasi);
         System.out.println("Haluatko nostaa lisää kortteja? (k/e)");
         lisakortti = lukija.nextLine();
-        int i;
-        for (i = 0; i <=2; lisakortti.equalsIgnoreCase("k") ) {
+        
+        for (int i = 0; i <=2; lisakortti.equalsIgnoreCase("k") ) {
             peliKasi.otaKortti(uusiKasikortti);
+            
             i++;
         }
-            System.out.println(loppuSumma);  
+            System.out.println(peliKasi);  
         }
        
 
