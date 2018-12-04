@@ -13,10 +13,10 @@ import java.util.ArrayList;
  */
 public class PelaajanKasi {
 
-    private final ArrayList<Kortti> pelaajanKortit = new ArrayList<>();
+    private final ArrayList<Kortti> kortit = new ArrayList<>();
 
     public void otaKortti(Kortti jaettu) {
-        pelaajanKortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
+        kortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
     }
 
     public int selvitaSumma() {
@@ -26,7 +26,7 @@ public class PelaajanKasi {
         Kortti-tyypin muuttujan lappu avulla kortin arvon, ja vertaa sitä
         annettuihin arvoihin.
          */
-        for (Kortti lappu : pelaajanKortit) {
+        for (Kortti lappu : kortit) {
 
             if (lappu.getArvo() >= 2 && lappu.getArvo() <= 10) {
 
@@ -54,7 +54,7 @@ public class PelaajanKasi {
     }*/
     @Override
     public String toString() {
-        return "Pelaajan kädessä on kortit " + pelaajanKortit + ", joiden summa on " + selvitaSumma() + ".";
+        return "Pelaajan kädessä on kortit " + kortit + ", joiden summa on " + selvitaSumma() + ".";
     }
 
 }
