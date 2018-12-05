@@ -37,7 +37,7 @@ public class Blackjack {
         peliKasi.otaKortti(uusiKasikortti);
         System.out.println("Toinen korttisi on " + uusiKasikortti);
         
-        
+        //testiä
         peliKasi.selvitaSumma(); // käytetään selvitaSumma-muuttujaa pelaajan käteen
 
         
