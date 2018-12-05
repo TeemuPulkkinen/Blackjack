@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class PelaajanKasi {
 
-    private final ArrayList<Kortti> kortit = new ArrayList<>();
+    private ArrayList<Kortti> kortit = new ArrayList<>();
 
     public void otaKortti(Kortti jaettu) {
         kortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
