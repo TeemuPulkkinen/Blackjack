@@ -26,8 +26,14 @@ public class PelaajanKasi {
         Kortti-tyypin muuttujan lappu avulla kortin arvon, ja vertaa sitä
         annettuihin arvoihin.
          */
+
         for (Kortti lappu : kortit) {
 
+            if (kortit.size() == 2 && kadenSumma > 21) {
+
+                kadenSumma = kadenSumma - 10;
+
+            }
             if (lappu.getArvo() >= 2 && lappu.getArvo() <= 10) {
 
                 kadenSumma = kadenSumma + lappu.getArvo();
@@ -37,6 +43,8 @@ public class PelaajanKasi {
             } else if (lappu.getArvo() == 1) {
 
                 kadenSumma = kadenSumma + 11;
+            } else if (lappu.getArvo() == 11) {
+
             }
 
         }
@@ -45,13 +53,11 @@ public class PelaajanKasi {
     }
 
     //selvittää onko pelaajalla blackjack
-    /*public void blackjack() {
+    /*
+    public int blackjack(int arvo) {
 
-        if (lappu >= 10 && lappu <= 13 && lappu2 == 1) {
-            System.out.println("Sinulla on blackjack!");
-        }
-
-    }*/
+    }
+    */
     @Override
     public String toString() {
         return "Pelaajan kädessä on kortit " + kortit + ", joiden summa on " + selvitaSumma() + ".";
