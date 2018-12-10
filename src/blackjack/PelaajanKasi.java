@@ -30,11 +30,7 @@ public class PelaajanKasi {
 
         for (Kortti lappu : kortit) {
 
-            if (kortit.size() == 2 && kadenSumma > 21) {
-
-                kadenSumma = kadenSumma - 10;
-
-            }
+            
             if (lappu.getArvo() >= 2 && lappu.getArvo() <= 10) {
 
                 kadenSumma = kadenSumma + lappu.getArvo();
@@ -44,7 +40,13 @@ public class PelaajanKasi {
             } else if (lappu.getArvo() == 1) {
 
                 kadenSumma = kadenSumma + 11;
-            } else if (lappu.getArvo() == 11) {
+            } 
+            
+            if (kortit.size() == 2 && kadenSumma > 21) {
+                
+                System.out.println("Sait kaksi ässää, toisen arvoksi asetetaan 1.");
+                kadenSumma = kadenSumma - 10;
+                lappu.setArvo(1);
 
             }
 
