@@ -26,6 +26,7 @@ public class PelaajanKasi {
         Kortti-tyypin muuttujan lappu avulla kortin arvon, ja vertaa sitä
         annettuihin arvoihin.
          */
+        
 
         for (Kortti lappu : kortit) {
 
@@ -57,7 +58,7 @@ public class PelaajanKasi {
     public int blackjack(int arvo) {
 
     }
-    */
+     */
     @Override
     public String toString() {
         return "Pelaajan kädessä on kortit " + kortit + ", joiden summa on " + selvitaSumma() + ".";
