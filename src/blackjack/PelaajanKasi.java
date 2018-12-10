@@ -40,27 +40,43 @@ public class PelaajanKasi {
             } else if (lappu.getArvo() == 1) {
 
                 kadenSumma = kadenSumma + 11;
-            } 
-            
-            if (kortit.size() == 2 && kadenSumma > 21) {
+            // jos indeksissä 1 olevan kortin arvo on 0, lisätään 2 eli 1
+            } if (kortit.get(1).equals(14)) {
                 
-                System.out.println("Sait kaksi ässää, toisen arvoksi asetetaan 1.");
-                kadenSumma = kadenSumma - 10;
-                lappu.setArvo(1);
-
+                kadenSumma = kadenSumma + 1;
+                
             }
+            
+            
 
         }
+        
+        if (kortit.size() == 2 && kadenSumma > 21) {
+                // toisen ässän lista-arvoksi asetetaan 0, jotta voidaan lisätä 2 eli 1.
+                System.out.println("Sait kaksi ässää, toisen arvoksi asetetaan 1.");
+                kadenSumma = kadenSumma - 10;
+                kortit.get(1).getArvo();
+                kortit.get(1).setArvo(14);
 
+            }
         return kadenSumma;//palauttaa käden summan
     }
 
     //selvittää onko pelaajalla blackjack
-    /*
-    public int blackjack(int arvo) {
-
+    
+    public boolean blackjack() {
+           
+        boolean selvitaBlackjack = false;
+        
+            if (kortit.size() == 2 && selvitaSumma() == 21) {
+                
+                selvitaBlackjack = true;
+            }
+        
+        
+        return selvitaBlackjack;
     }
-     */
+     
     @Override
     public String toString() {
         return "Pelaajan kädessä on kortit " + kortit + ", joiden summa on " + selvitaSumma() + ".";
