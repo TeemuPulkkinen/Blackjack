@@ -23,13 +23,10 @@ public class Blackjack {
          */
         // eurooppalainen blackjack
 
-        
         Scanner lukija = new Scanner(System.in);
         Korttipakka peliPakka = new Korttipakka();
 
         String lisakortti;
-        
-        
 
         peliPakka.sekoita(); // sekoitetaan korttipakka
 
@@ -41,7 +38,7 @@ public class Blackjack {
         tarvitse tehdä omaa listaa.
          */
         Kortti uusiKasikortti = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se pelaajalle
-        
+
         peliKasi.otaKortti(uusiKasikortti); //lähetetään kortti pelaajan käteen
         //peliKasi.otaKortti(new Kortti("Ruutu ", 1));
         System.out.println("Ensimmäinen korttisi on " + uusiKasikortti + ".");
@@ -75,7 +72,7 @@ public class Blackjack {
                     System.out.println("Hävisit!");
                     System.exit(0);//lopettaa Java-ohjelman
                 }
-                
+
             }
             System.out.println("Haluatko nostaa lisää kortteja? (k/e)");
             lisakortti = lukija.nextLine();
@@ -107,12 +104,12 @@ public class Blackjack {
         if ((peliKasi.selvitaSumma() > emannanKasi.selvitaSumma()) && peliKasi.selvitaSumma() <= 21) {
             System.out.println("Sinä voitit!");
 
-        } else if (emannanKasi.selvitaSumma() > peliKasi.selvitaSumma()){
+        } else if (emannanKasi.selvitaSumma() > peliKasi.selvitaSumma()) {
             System.out.println("Emäntä voitti!");
         }
         /* Tällä hetkellä vaikka kummallakaan ei olisi blackjackia mutta tilanne on tasan
         pelaaja saa silti rahansa takaisin ja peli päättyy tasapeliin.
-        */
+         */
         if (peliKasi.selvitaSumma() == emannanKasi.selvitaSumma()) {
             System.out.println("Tasatilanne, saat rahasi takaisin.");
         }
