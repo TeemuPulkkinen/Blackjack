@@ -50,7 +50,7 @@ public class Blackjack {
 
         while (lisakortti.equalsIgnoreCase("k")) {
             uusiKasikortti = peliPakka.jaaKortti();
-            //peliKasi.otaKortti(uusiKasikortti);
+            peliKasi.otaKortti(uusiKasikortti);
             System.out.println(peliKasi);
             System.out.println("Uusi kortti on " + uusiKasikortti);
             System.out.println("Haluatko nostaa lisää kortteja? (k/e)");

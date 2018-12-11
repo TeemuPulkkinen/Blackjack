@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class PelaajanKasi {
 
     private ArrayList<Kortti> kortit = new ArrayList<>();
-
-    Kortti kaksiAssaa;//?????
+    //boolean assaVarmistus = false;
+    //Kortti kaksiAssaa;//?????
 
     public void otaKortti(Kortti jaettu) {
         kortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
@@ -44,14 +44,19 @@ public class PelaajanKasi {
             }
 
         }
-        boolean assaVarmistus = false;
-        if ((kortit.size() == 2) && (kadenSumma > 21) && (assaVarmistus == false)) {
-
-            kadenSumma = ((kadenSumma - kortit.get(1).getArvo()));
-            
-            System.out.println("Sait kaksi ässää, toisen arvoksi asetetaan 1.");
-            assaVarmistus = true;
+        
+        if (kortit.get(1).getArvo() == 1 && kortit.get(0).getArvo() == 1) {
+            kadenSumma -= 10;
+            //tähän ei voi laittaa tulostusta, koska muuten tulostuu kahdesti
+            //myöhemmin kun selvitetään Blackjackiä.
         }
+        /*if ((kortit.size() == 2) && (kadenSumma > 21) && (!assaVarmistus)) {
+
+            
+            kadenSumma = (kadenSumma - 10);
+            System.out.println("Sait kaksi ässää, toisen arvoksi asetetaan 1.");
+            //assaVarmistus = true;
+        }*/
         return kadenSumma;//palauttaa käden summan
     }
 
