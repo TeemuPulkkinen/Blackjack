@@ -48,9 +48,10 @@ public class Korttipakka {
     public Kortti jaaKortti() {
         return pakka.remove(0);
     }
+
     /*
     Tarvitaan kolme listaa: pakka, pelaajankäsi eli pelaajan pakka ja emännän käsi eli emännän pakka
-    */
+     */
 
     @Override
     public String toString() {

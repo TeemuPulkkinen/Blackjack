@@ -14,11 +14,14 @@ import java.util.ArrayList;
 public class PelaajanKasi {
 
     private ArrayList<Kortti> kortit = new ArrayList<>();
-    //boolean assaVarmistus = false;
-    //Kortti kaksiAssaa;//?????
+    private ArrayList<Kortti> emannanKortit = new ArrayList<>();
+    
 
     public void otaKortti(Kortti jaettu) {
         kortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
+    }
+    public void otaEmannanKortti (Kortti ejaettu) {
+        emannanKortit.add(ejaettu);
     }
 
     public int selvitaSumma() {
