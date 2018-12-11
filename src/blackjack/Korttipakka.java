@@ -52,7 +52,6 @@ public class Korttipakka {
     /*
     Tarvitaan kolme listaa: pakka, pelaajankäsi eli pelaajan pakka ja emännän käsi eli emännän pakka
      */
-
     @Override
     public String toString() {
         return "Jäljellä olevat kortit:" + pakka;

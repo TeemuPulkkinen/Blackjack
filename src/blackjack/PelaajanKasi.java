@@ -14,13 +14,10 @@ import java.util.ArrayList;
 public class PelaajanKasi {
 
     private ArrayList<Kortti> kortit = new ArrayList<>();
-    
-    
 
     public void otaKortti(Kortti jaettu) {
         kortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
     }
-    
 
     public int selvitaSumma() {
 
@@ -51,7 +48,7 @@ public class PelaajanKasi {
             //tähän ei voi laittaa tulostusta, koska muuten tulostuu kahdesti
             //myöhemmin kun selvitetään Blackjackiä.
         }
-        
+
         return kadenSumma;//palauttaa käden summan
     }
 
@@ -74,7 +71,7 @@ public class PelaajanKasi {
 
     @Override
     public String toString() {
-        return "Pelaajan kädessä on kortit " + kortit + ", joiden summa on " + selvitaSumma() + ".";
+        return " kädessä on kortit " + kortit + ", joiden summa on " + selvitaSumma() + ".";
     }
 
 }
