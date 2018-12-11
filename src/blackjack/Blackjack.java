@@ -34,11 +34,11 @@ public class Blackjack {
         System.out.println("Nostetaan seuraava kortti.");
         Kortti uusiKasikortti = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
         //peliKasi.otaKortti(uusiKasikortti); //lähetetään kortti pelaajan käteen
-        peliKasi.otaKortti(new Kortti("Ruutu", 1));
+        peliKasi.otaKortti(new Kortti("Ruutu ", 1));
         System.out.println("Ensimmäinen korttisi on " + uusiKasikortti);
         uusiKasikortti = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
         //peliKasi.otaKortti(uusiKasikortti);
-        peliKasi.otaKortti(new Kortti("Hertta", 1));
+        peliKasi.otaKortti(new Kortti("Hertta ", 1));
         System.out.println("Toinen korttisi on " + uusiKasikortti);
 
         //testiä
@@ -50,7 +50,7 @@ public class Blackjack {
 
         while (lisakortti.equalsIgnoreCase("k")) {
             uusiKasikortti = peliPakka.jaaKortti();
-            peliKasi.otaKortti(uusiKasikortti);
+            //peliKasi.otaKortti(uusiKasikortti);
             System.out.println(peliKasi);
             System.out.println("Uusi kortti on " + uusiKasikortti);
             System.out.println("Haluatko nostaa lisää kortteja? (k/e)");
