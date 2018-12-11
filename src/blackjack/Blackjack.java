@@ -38,21 +38,22 @@ public class Blackjack {
         System.out.println("Ensimmäinen korttisi on " + uusiKasikortti);
         uusiKasikortti = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
         //peliKasi.otaKortti(uusiKasikortti);
-        peliKasi.otaKortti(new Kortti("Hertta ", 1));
+        peliKasi.otaKortti(new Kortti("Hertta ", 12));
         System.out.println("Toinen korttisi on " + uusiKasikortti);
 
         //testiä
         peliKasi.selvitaSumma(); // käytetään selvitaSumma-muuttujaa pelaajan käteen
 
         System.out.println(peliKasi);
+        peliKasi.blackjack();
         System.out.println("Haluatko nostaa lisää kortteja? (k/e)");
         lisakortti = lukija.nextLine();
 
         while (lisakortti.equalsIgnoreCase("k")) {
             uusiKasikortti = peliPakka.jaaKortti();
             peliKasi.otaKortti(uusiKasikortti);
-            System.out.println(peliKasi);
             System.out.println("Uusi kortti on " + uusiKasikortti);
+            System.out.println(peliKasi);
             System.out.println("Haluatko nostaa lisää kortteja? (k/e)");
             lisakortti = lukija.nextLine();
 

@@ -44,7 +44,7 @@ public class PelaajanKasi {
             }
 
         }
-        
+
         if (kortit.get(1).getArvo() == 1 && kortit.get(0).getArvo() == 1) {
             kadenSumma -= 10;
             //tähän ei voi laittaa tulostusta, koska muuten tulostuu kahdesti
@@ -65,12 +65,16 @@ public class PelaajanKasi {
 
         boolean selvitaBlackjack = false;
 
-        if (kortit.size() == 2 && selvitaSumma() == 21) {
+        if (((kortit.get(0).getArvo() == 1) || (kortit.get(1).getArvo() >= 10 && kortit.get(1).getArvo() <= 13))
+        || ((kortit.get(1).getArvo() == 1) || kortit.get(0).getArvo() >= 10 && kortit.get(0).getArvo() <= 13)) {
 
             selvitaBlackjack = true;
+            System.out.println("Sinulla on blackjack! :) Voit lopettaa korttien nostamisen.");
+            
         }
 
         return selvitaBlackjack;
+        
     }
 
     @Override
