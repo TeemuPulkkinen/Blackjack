@@ -14,15 +14,13 @@ import java.util.ArrayList;
 public class PelaajanKasi {
 
     private ArrayList<Kortti> kortit = new ArrayList<>();
-    private ArrayList<Kortti> emannanKortit = new ArrayList<>();
+    
     
 
     public void otaKortti(Kortti jaettu) {
         kortit.add(jaettu); // otetaan pääohjelmasta lähetetty kortti vastaan ja lisätään se pelaajan käden listaan
     }
-    public void otaEmannanKortti (Kortti ejaettu) {
-        emannanKortit.add(ejaettu);
-    }
+    
 
     public int selvitaSumma() {
 
@@ -53,13 +51,7 @@ public class PelaajanKasi {
             //tähän ei voi laittaa tulostusta, koska muuten tulostuu kahdesti
             //myöhemmin kun selvitetään Blackjackiä.
         }
-        /*if ((kortit.size() == 2) && (kadenSumma > 21) && (!assaVarmistus)) {
-
-            
-            kadenSumma = (kadenSumma - 10);
-            System.out.println("Sait kaksi ässää, toisen arvoksi asetetaan 1.");
-            //assaVarmistus = true;
-        }*/
+        
         return kadenSumma;//palauttaa käden summan
     }
 
