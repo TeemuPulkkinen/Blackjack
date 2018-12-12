@@ -52,18 +52,18 @@ public class Blackjack {
          */
         Kortti uusiKasikortti = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se pelaajalle
 
-        //peliKasi.otaKortti(uusiKasikortti); //lähetetään kortti pelaajan käteen
-        peliKasi.otaKortti(new Kortti("Ruutu ", 1));
+        peliKasi.otaKortti(uusiKasikortti); //lähetetään kortti pelaajan käteen
+        //peliKasi.otaKortti(new Kortti("Ruutu ", 1));
         System.out.println("Ensimmäinen korttisi on " + uusiKasikortti + ".");
         System.out.println("Emäntä nostaa ensimmäisen korttinsa.");
         Kortti uusiEmannanKortti = peliPakka.jaaKortti(); //otetaan pakasta kortti ja jaetaan se emännälle
-        //emannanKasi.otaKortti(uusiEmannanKortti); //lähetetään kortti emännän käteen
-        emannanKasi.otaKortti(new Kortti("Pata ", 12));
+        emannanKasi.otaKortti(uusiEmannanKortti); //lähetetään kortti emännän käteen
+        //emannanKasi.otaKortti(new Kortti("Pata ", 12));
         System.out.println("Emännän ensimmäinen kortti on " + uusiEmannanKortti + ".");
         System.out.println("Nostetaan seuraava pelaajan kortti.");
         uusiKasikortti = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
-        //peliKasi.otaKortti(uusiKasikortti);
-        peliKasi.otaKortti(new Kortti("Hertta ", 12));
+        peliKasi.otaKortti(uusiKasikortti);
+        //peliKasi.otaKortti(new Kortti("Hertta ", 12));
         System.out.println("Toinen korttisi on " + uusiKasikortti + ".");
 
         //testiä
@@ -96,7 +96,7 @@ public class Blackjack {
 
         }
         if (lisakortti.equalsIgnoreCase("e")) {
-            System.out.println("Lopullinen käsi on " + peliKasi.selvitaSumma() + ".");
+            System.out.println("Lopullinen kätesi on " + peliKasi.selvitaSumma() + ".");
             System.out.println("Nyt on emännän vuoro pelata!");
 
         }
@@ -108,8 +108,8 @@ public class Blackjack {
         System.out.println("");
         System.out.println("Emäntä nostaa toisen kortin.");
         uusiEmannanKortti = peliPakka.jaaKortti(); //otetaan pakasta kortti ja jaetaan se emännälle
-        //emannanKasi.otaKortti(uusiEmannanKortti); //lähetetään kortti emännän käteen
-        emannanKasi.otaKortti(new Kortti("Risti ", 1));
+        emannanKasi.otaKortti(uusiEmannanKortti); //lähetetään kortti emännän käteen
+        //emannanKasi.otaKortti(new Kortti("Risti ", 1));
         System.out.println("Emännän toinen kortti on " + uusiEmannanKortti + ".");
         System.out.println("Emännän" + emannanKasi);
         while (emannanKasi.selvitaSumma() < 15) {
@@ -125,12 +125,15 @@ public class Blackjack {
         }
         if (emannanKasi.selvitaSumma() >= 15) {
             System.out.println("Koska emännän käden summa on 15 tai yli, ei hän enää nosta kortteja.");
+            System.out.println("Emännän käden loppusumma on "+emannanKasi.selvitaSumma()+".");
         }
         if ((peliKasi.selvitaSumma() > emannanKasi.selvitaSumma()) && peliKasi.selvitaSumma() <= 21) {
             System.out.println("Sinä voitit!");
 
         } else if ((emannanKasi.selvitaSumma() > peliKasi.selvitaSumma()) && (emannanKasi.selvitaSumma() <= 21)) {
             System.out.println("Emäntä voitti!");
+        } else if ((emannanKasi.selvitaSumma() > peliKasi.selvitaSumma()) && (emannanKasi.selvitaSumma() > 21)) {
+            System.out.println("Sinä voitit!");
         }
         /*Tällä hetkellä vaikka kummallakaan ei olisi blackjackia mutta tilanne on tasan
         pelaaja saa silti rahansa takaisin ja peli päättyy tasapeliin.
