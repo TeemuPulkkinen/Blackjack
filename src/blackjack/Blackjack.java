@@ -17,6 +17,18 @@ public class Blackjack {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("TERVETULOA PELAAMAAN TEEMUN JA PINJAN BLACKJACKIA!");
+        System.out.println("Tämä on eurooppalainen Blackjack, jossa ensiksi pelaajalle jaetaan kaksi korttia ja emännälle yksi.");
+        System.out.println("Sitten pelaaja saa nostaa niin monta korttia kun haluaa, mutta voittaakseen pistemäärän täytyy olla 21 tai alle.");
+        System.out.println("Tämän jälkeen emäntä nostaa korttinsa. Jos emäntä saa 21 pistettä tai alle, ja enemmän kuin pelaaja, emäntä voittaa.");
+        System.out.println("Pisteet jakautuvat seuraavasti:");
+        System.out.println("Kortit 2-10: korttinsa mukainen pistemäärä");
+        System.out.println("Kortit 11-13: 10 pistettä");
+        System.out.println("Ässä: 11 pistettä");
+        System.out.println("Jos saat tasan 21, sinulla on blackjack ja voitat heti. Jos pisteet ylittävät 21, häviät ja peli päättyy.");
+        System.out.println("");
+        System.out.println("PELAAJAN VUORO");
+        System.out.println("");
         /*
         peliKasi.otaKortti(new Kortti("Ruutu", 1)); voi testata yksittäisten
         korttien nostoa. Tai tiettyjä käsiä.
@@ -86,6 +98,9 @@ public class Blackjack {
         /*
         Emäntä pelaa tässä oman vaiheensa.
          */
+        System.out.println("");
+        System.out.println("EMÄNNÄN VUORO");
+        System.out.println("");
         System.out.println("Emäntä nostaa toisen kortin.");
         uusiEmannanKortti = peliPakka.jaaKortti(); //otetaan pakasta kortti ja jaetaan se emännälle
         emannanKasi.otaKortti(uusiEmannanKortti); //lähetetään kortti emännän käteen
