@@ -61,7 +61,7 @@ public class PelaajanKasi {
                 || ((kortit.get(1).getArvo() == 1) && kortit.get(0).getArvo() >= 10 && kortit.get(0).getArvo() <= 13)) {
 
             selvitaBlackjack = true;
-            System.out.println("Sinulla on blackjack! :) Voit lopettaa korttien nostamisen.");
+            //System.out.println("Sinulla on blackjack! :) Voit lopettaa korttien nostamisen.");
 
         }
 
