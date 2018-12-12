@@ -57,7 +57,8 @@ public class Blackjack {
         System.out.println("Ensimmäinen korttisi on " + uusiKasikortti + ".");
         System.out.println("Emäntä nostaa ensimmäisen korttinsa.");
         Kortti uusiEmannanKortti = peliPakka.jaaKortti(); //otetaan pakasta kortti ja jaetaan se emännälle
-        emannanKasi.otaKortti(uusiEmannanKortti); //lähetetään kortti emännän käteen
+        //emannanKasi.otaKortti(uusiEmannanKortti); //lähetetään kortti emännän käteen
+        emannanKasi.otaKortti(new Kortti("Pata ", 4));
         System.out.println("Emännän ensimmäinen kortti on " + uusiEmannanKortti + ".");
         System.out.println("Nostetaan seuraava pelaajan kortti.");
         uusiKasikortti = peliPakka.jaaKortti(); // otetaan pakasta kortti ja jaetaan se
@@ -104,7 +105,8 @@ public class Blackjack {
         System.out.println("");
         System.out.println("Emäntä nostaa toisen kortin.");
         uusiEmannanKortti = peliPakka.jaaKortti(); //otetaan pakasta kortti ja jaetaan se emännälle
-        emannanKasi.otaKortti(uusiEmannanKortti); //lähetetään kortti emännän käteen
+        //emannanKasi.otaKortti(uusiEmannanKortti); //lähetetään kortti emännän käteen
+        emannanKasi.otaKortti(new Kortti ("Risti ", 4));
         System.out.println("Emännän toinen kortti on " + uusiEmannanKortti + ".");
         System.out.println("Emännän" + emannanKasi);
         while (emannanKasi.selvitaSumma() < 15) {
