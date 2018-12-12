@@ -119,8 +119,13 @@ public class Blackjack {
         }
         if ((peliKasi.selvitaSumma() > emannanKasi.selvitaSumma()) && peliKasi.selvitaSumma() <= 21) {
             System.out.println("Sinä voitit!");
-
-        } else if (emannanKasi.selvitaSumma() > peliKasi.selvitaSumma()) {
+            
+        } else if ((peliKasi.blackjack() == true) && (peliKasi.selvitaSumma() > emannanKasi.selvitaSumma())){
+            System.out.println("Sinä voitit!");
+        } else if ((peliKasi.blackjack() == true) && (peliKasi.selvitaSumma() == emannanKasi.selvitaSumma())) {
+            System.out.println("Tasapeli, pelaaja saa rahat takaisin.");
+        }
+         else if (emannanKasi.selvitaSumma() > peliKasi.selvitaSumma()) {
             System.out.println("Emäntä voitti!");
         }
         /* Tällä hetkellä vaikka kummallakaan ei olisi blackjackia mutta tilanne on tasan

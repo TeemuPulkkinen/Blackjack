@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author s1800591
  */
 public class PelaajanKasi {
-
+    boolean selvitaBlackjack = false;
     private ArrayList<Kortti> kortit = new ArrayList<>();
 
     public void otaKortti(Kortti jaettu) {
@@ -55,7 +55,7 @@ public class PelaajanKasi {
     //selvittää onko pelaajalla blackjack
     public boolean blackjack() {
 
-        boolean selvitaBlackjack = false;
+        
 
         if (((kortit.get(0).getArvo() == 1) && (kortit.get(1).getArvo() >= 10 && kortit.get(1).getArvo() <= 13))
                 || ((kortit.get(1).getArvo() == 1) && kortit.get(0).getArvo() >= 10 && kortit.get(0).getArvo() <= 13)) {
