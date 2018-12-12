@@ -25,6 +25,7 @@ public class Blackjack {
         System.out.println("Kortit 2-10: korttinsa mukainen pistemäärä");
         System.out.println("Kortit 11-13: 10 pistettä");
         System.out.println("Ässä: 11 pistettä");
+        System.out.println("Jos aloituskädessä on kaksi ässää, on toisen ässän arvo 11 ja toisen 1.");
         System.out.println("Jos saat tasan 21, sinulla on blackjack ja voitat heti. Jos pisteet ylittävät 21, häviät ja peli päättyy.");
         System.out.println("");
         System.out.println("PELAAJAN VUORO");
