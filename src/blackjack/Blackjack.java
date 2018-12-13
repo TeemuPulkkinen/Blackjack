@@ -138,8 +138,6 @@ public class Blackjack {
         /*Mikäli pelaajalla ja emännällä on kahden ensimmäisen korttinsa perusteella blackjack,
         peli päättyy niin sanottuun "push"-tilanteeseen jolloin pelaaja saa rahansa takaisin
         täysimääräisenä.
-        Jos peli päättyy muutoin tasan, eli vaikka pelaajan käden tulos on 15 ja emännän käden tulos
-        on myös 15, pelaaja saa rahoistaan takaisin puolet ja emäntä pitää toisen puolen.
         */
         if (peliKasi.blackjack() == true && emannanKasi.blackjack() == true) {
             System.out.println("Sekä pelaajalla että emännällä on blackjack, pelaaja saa rahansa takaisin.");
