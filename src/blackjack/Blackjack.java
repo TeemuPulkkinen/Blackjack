@@ -135,11 +135,12 @@ public class Blackjack {
         } else if ((emannanKasi.selvitaSumma() > peliKasi.selvitaSumma()) && (emannanKasi.selvitaSumma() > 21)) {
             System.out.println("Sinä voitit!");
         }
-        /*Tällä hetkellä vaikka kummallakaan ei olisi blackjackia mutta tilanne on tasan
-        pelaaja saa silti rahansa takaisin ja peli päättyy tasapeliin.
-         */
-        //^__ Vanhaa tietoa,tässä alla on vaihtoehto jossa molemmilla on kahdesta ekasta kortista
-        // blackjack, joten kyseessä on push jossa saadaan rahat takaisin kokonaisuudessaan
+        /*Mikäli pelaajalla ja emännällä on kahden ensimmäisen korttinsa perusteella blackjack,
+        peli päättyy niin sanottuun "push"-tilanteeseen jolloin pelaaja saa rahansa takaisin
+        täysimääräisenä.
+        Jos peli päättyy muutoin tasan, eli vaikka pelaajan käden tulos on 15 ja emännän käden tulos
+        on myös 15, pelaaja saa rahoistaan takaisin puolet ja emäntä pitää toisen puolen.
+        */
         if (peliKasi.blackjack() == true && emannanKasi.blackjack() == true) {
             System.out.println("Sekä pelaajalla että emännällä on blackjack, pelaaja saa rahansa takaisin.");
 
